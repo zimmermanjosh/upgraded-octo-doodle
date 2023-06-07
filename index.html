@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="author" content="joshua b  zimemrman" />
+    <meta name="keywords" content="parks, us" />
+    <title>Around the U.S.</title>
+    <!--/styles/style.css-->
+    <link rel="stylesheet" href="./pages/index.css" />
+    <!--/favicon.ico-->
+    <link rel="icon" href="./favicon.ico" />
+  </head>
+  <!--/page-->
+  <body class="page">
+    <div class="page__content">
+      <header class="header">
+        <img
+          class="header__img"
+          src="./images/icons/logo-AroundTheWorld__White.svg"
+          alt="around the world U.S."
+        />
+      </header>
+      <!--/content-->
+      <main class="content">
+        <!--/profile_section-->
+        <section class="profile page__section">
+          <img
+            src="./images/pictures/GtQ83qF.jpg"
+            alt="avatar"
+            class="profile__img"
+          />
+          <div class="profile__info">
+            <h1 class="profile__title" id="profile-title">Joshua Zimmerman</h1>
+            <button
+              type="button"
+              class="profile__edit-button"
+              id="profile-edit-button"
+            ></button>
+            <p class="profile__descr" id="profile-descr">Explorer, dad</p>
+          </div>
+          <button
+            type="button"
+            class="profile__add-button"
+            id="element-add-button"
+          ></button>
+        </section>
+        <!--/elements_section-->
+        <section class="elements page__section">
+          <!--/elements_list || elements from website-->
+          <ul class="elements__list">
+            <!--/element_object  || this is an element of element(s)-->
+          </ul>
+        </section>
+      </main>
+      <!--/footer-->
+      <footer class="footer">
+        <p class="footer__copyright">©2023 Around the U.S.</p>
+      </footer>
+    </div>
+    <!-- Modal Profile 2023/02/01-->
+    <div class="modal" id="profile-edit-modal">
+      <div class="modal__container">
+        <button class="modal__close" id="modal-close-button"></button>
+        <p class="modal__heading">Edit profile</p>
+        <form class="modal__form" id="profile-edit-form">
+          <input
+            class="modal__form-input"
+            type="text"
+            name="title"
+            placeholder="Name"
+            id="profile-title-input"
+            required
+          />
+          <input
+            class="modal__form-input"
+            type="text"
+            name="description"
+            placeholder="Description"
+            id="profile-descr-input"
+            required
+          />
+          <button class="modal__button">Save</button>
+        </form>
+      </div>
+    </div>
+    <!-- Modal ADD URL and name  2023/02/11-->
+    <div class="modal" id="element-add-modal">
+      <div class="modal__container">
+        <button class="modal__close" id="element-add-close"></button>
+        <p class="modal__heading">New Location</p>
+        <form class="modal__form" id="element-add-form">
+          <input
+            class="modal__form-input"
+            type="text"
+            name="title"
+            placeholder="Title"
+            id="element-title-input"
+            required
+          />
+          <input
+            class="modal__form-input"
+            type="text"
+            name="url"
+            placeholder="Image Link"
+            id="element-image-input"
+            required
+          />
+          <button class="modal__button">Create</button>
+        </form>
+      </div>
+    </div>
+    <div class="modal" id="element-image-modal">
+      <div class="modal__container-element">
+        <img
+          class="modal__image-element"
+          id="element-modal-image"
+          src="#"
+          alt=""
+        />
+        <p class="modal__caption-element" id="element-modal-caption"></p>
+        <button class="modal__close" id="element-image-close"></button>
+      </div>
+    </div>
+    <!-- template-->
+    <template id="element-template">
+      <li class="element">
+        <button
+          class="element__delete-button"
+          id="element-delete-button"
+          title="button"
+        ></button>
+        <img class="element__img" src="#" alt="" id="element-image" />
+        <div class="element__descr">
+          <h2 class="element__text" id="element-title"></h2>
+          <button class="element__like-button" type="button"></button>
+        </div>
+      </li>
+    </template>
+    <!--/scripts-->
+    <script src="./scripts/scripts.js" defer></script>
+  </body>
+</html>
